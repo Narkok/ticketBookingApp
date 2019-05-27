@@ -1,0 +1,106 @@
+.dateSelector
+{
+    width: 400px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.dateSelectButton
+{
+    color: #00A8A8;
+    font-weight: 500;
+    font-family: Roboto, serif;
+    width: content;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    padding-right: 15px;
+    text-decoration: underline;
+}
+
+.days
+{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 54px;
+    opacity: 1;
+    transition: 0.3s all;
+}
+
+.daysHide
+{
+    top: 40px;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+}
+
+.dayButton
+{
+    height: 42px;
+    width: 54px;
+    padding-top: 4px;
+    float: left;
+    cursor: pointer;
+    line-height: normal;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.2s all;
+}
+
+.dayButton:hover{
+    box-shadow: 0 0 0 2px #00CECE;
+}
+
+.dayButton:active{
+    box-shadow: 0 0 0 0px #00CECE;
+}
+
+.dayButtonSelected
+{
+    color: #fff;
+    font-weight: 500;
+    background-color: #00CECE;
+}
+
+.today::after
+{
+    content: "";
+    position: absolute;
+    width: 88%;
+    left: 6%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #00CECE;
+    bottom: -8px;
+}
+
+.today:hover .today::after
+{
+    background-color: red;
+    bottom: -10px;
+}
+
+.prevDay
+{
+    color: #B8BDBF;
+}
+
+.dayButtonDay
+{
+    width: 100%;
+    text-align: center;
+}
+
+.dayButtonMonth
+{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.dayButton:not(:first-child)
+{
+    margin-left: calc((100% - 15 * 54px) / 14);
+}
