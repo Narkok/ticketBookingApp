@@ -144,12 +144,8 @@ function getAvailableSeats(key)
 function prepareTime(currentDate)
 {
 	if (currentDate.getHours() < 10) return 10;
-	if (currentDate.getHours() < 12) return 12;
-	if (currentDate.getHours() < 14) return 14;
-	if (currentDate.getHours() < 16) return 16;
-	if (currentDate.getHours() < 18) return 18;
-	if (currentDate.getHours() < 20) return 20;
-	return 10;
+	if (currentDate.getHours() > 20) return 10;
+	return Math.ceil(Math.ceil(currentDate.getHours()) / 2) * 2;
 }
 
 // Возвращает день ближайшего сеанса.
